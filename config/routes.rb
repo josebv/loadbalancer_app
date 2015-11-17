@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
   get 'products/buy'
-
   get 'products/info'
-
   get 'products/list'
-
   get 'careers/jobs'
-
   get 'careers/join'
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
