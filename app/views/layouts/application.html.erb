@@ -10,6 +10,10 @@
 
 <%= yield %>
 
-<%= $hostname %>
+Server: <%= $hostname %><br/>
+Request IP: <%= request.ip %><br/>
+Remote Addr: <%= request.env["REMOTE_ADDR"] %><br/>
+Forwarded For: <%= request.env["HTTP_X_FORWARDED_FOR"] %><br/>
+Remote IP: <%= request.remote_ip %><br/>
 </body>
 </html>
